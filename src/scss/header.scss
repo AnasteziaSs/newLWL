@@ -1,0 +1,163 @@
+//====================================================================================================
+.header {
+	&__container {
+		@media (min-width: $mobile) {
+			display: flex;
+			align-items: flex-start;
+			margin-top: 48px;
+			margin-bottom: 48px;
+		}
+	}
+
+	&__logo {
+		display: block;
+		@include adaptiveValue("margin-right", 40, 15, 1400, 768, 1);
+	}
+
+	&__menu {
+	}
+
+	&__form {
+	}
+
+	&__actions {
+	}
+}
+//========================================================================================================================================================
+
+._icon-arrow-down {
+	margin-left: em(8, 16);
+	&._spoller-active {
+		transform: rotateZ(-180deg);
+	}
+}
+
+.menu {
+	&__body {
+	}
+
+	&__list {
+		font-weight: 500;
+		line-height: math.div(24, 16);
+		@media (min-width: $mobile) {
+			display: flex;
+		}
+		li {
+			@include adaptiveValue("margin-right", 40, 15, 1400, 768, 1);
+		}
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+}
+//========================================================================================================================================================
+
+.products-spollers {
+	&__item {
+	}
+
+	&__title {
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__item {
+	}
+
+	&__link {
+	}
+}
+//========================================================================================================================================================
+
+.rooms-spollers {
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	&__item {
+	}
+
+	&__name {
+		margin-right: em(8, 16);
+	}
+
+	&__title {
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__link {
+	}
+}
+//========================================================================================================================================================
+
+.actions-header {
+	&__favorite {
+	}
+
+	&__cart {
+	}
+
+	&__image-ibg {
+	}
+}
+
+//====================================================================================================
+
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: 30px;
+		height: 18px;
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			left: 0px;
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			background-color: #000;
+		}
+		&::before {
+			top: 0px;
+		}
+		&::after {
+			bottom: 0px;
+		}
+		span {
+			top: calc(50% - 1px);
+		}
+		.menu-open & {
+			span {
+				transform: scale(0);
+			}
+			&::before {
+				transform: rotate(-45deg);
+				top: calc(50% - 1px);
+			}
+			&::after {
+				transform: rotate(45deg);
+				bottom: calc(50% - 1px);
+			}
+		}
+	}
+}
