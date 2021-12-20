@@ -1,58 +1,43 @@
 <header class="header">
 	<div class="header__container">
-		<button type="button" class="icon-menu"><span></span></button>
-		<a href="" class="header__logo menu-title">Funiro.</a>
-		<div class="header__menu menu">
-			<nav class="menu__body">
-				<ul class="menu__list">
-					<li class="menu__item">
-						<div data-spollers class="products-spollers">
-							<div class="products-spollers__item">
-								<button type="button" data-spoller class="products-spollers__title _icon-arrow-down">products</button>
-								<div class="products-spollers__body">
-									<ul class="products-spollers__list">
-										<li class="products-spollers__item"><a href="" class="products-spollers__link">Option</a>
-										</li>
-										<li class="products-spollers__item"><a href="" class="products-spollers__link">Option</a>
-										</li>
-										<li class="products-spollers__item"><a href="" class="products-spollers__link">Option</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="menu__item">
-						<div data-spollers class="rooms-spollers">
-							<div class="rooms-spollers__item">Rooms
-								<button type="button" data-spoller class="rooms-spollers__title _icon-arrow-down"></button>
-								<div class="rooms-spollers__body">
-									<ul class="rooms-spollers__list">
-										<li class="rooms-spollers__item"><a href="" class="rooms-spollers__link">Option</a>
-										</li>
-										<li class="rooms-spollers__item"><a href="" class="rooms-spollers__link">Option</a>
-										</li>
-										<li class="rooms-spollers__item"><a href="" class="rooms-spollers__link">Option</a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</li>
-					<li class="menu__item"><a href="" class="menu__link">Inspirations </a></li>
-				</ul>
-			</nav>
-		</div>
-		<form class="header__form " action="" method="get">
-			<button type="submit" class="header__button  _icon-search"></button>
-			<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
-				placeholder="Search for minimalist chair" class="input">
+		<div class="header__row">
+			<button type="button" class="icon-menu"><span></span></button>
+			<a href="" class="header__logo menu-title">Funiro.</a>
+			<div class="header__menu menu">
+				<nav class="menu__body">
+					<ul class="menu__list">
+						<li class="menu__item products">
+							<div class="products__title _icon-arrow-down">Products</div>
+							<ul class="products__submenu submenu submenu-products">
+								<li class="submenu-products__item"><a href="#" class="submenu-products__link">Option</a></li>
+								<li class="submenu-products__item"><a href="#" class="submenu-products__link">Option</a></li>
+								<li class="submenu-products__item"><a href="#" class="submenu-products__link">Option</a></li>
+							</ul>
+						</li>
+						<li class="menu__item rooms">
+							<div class="rooms__title _icon-arrow-down">Rooms</div>
+							<ul class="rooms__submenu submenu submenu-rooms">
+								<li class="submenu-rooms"><a href="#" class="submenu-romms__link">Option</a></li>
+								<li class="submenu-rooms"><a href="#" class="submenu-romms__link">Option</a></li>
+								<li class="submenu-rooms"><a href="#" class="submenu-romms__link">Option</a></li>
+							</ul>
+						</li>
+						<li class="menu__item"><a href="" class="menu__link">Inspirations </a></li>
+					</ul>
+				</nav>
 
-		</form>
-		<div class="header__actions actions-header">
-			<div class="actions-header__favorite _icon-favorite"></div>
-			<div class="actions-header__cart _icon-cart"></div>
-			<div class="actions-header__image-ibg"><img src="@img/user.jpg" alt=""></div>
+			</div>
+			<form class="header__form " action="" method="get">
+				<button type="submit" class="header__button  _icon-search"></button>
+				<input autocomplete="off" type="text" name="form[]" data-error="Ошибка"
+					placeholder="Search for minimalist chair" class="input">
+
+			</form>
+			<div class="header__actions actions-header">
+				<div class="actions-header__favorite _icon-favorite"></div>
+				<div class="actions-header__cart _icon-cart"></div>
+				<div class="actions-header__image-ibg"><img src="@img/user.jpg" alt=""></div>
+			</div>
 		</div>
 	</div>
 </header>

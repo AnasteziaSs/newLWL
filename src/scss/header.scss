@@ -1,116 +1,132 @@
-//====================================================================================================
 .header {
+	// .header__container
 	&__container {
-		@media (min-width: $mobile) {
-			display: flex;
-			align-items: flex-start;
-			margin-top: 48px;
-			margin-bottom: 48px;
-		}
 	}
 
+	&__row {
+		margin-top: rem(47);
+		display: flex;
+		align-items: center;
+	}
+
+	// .header__logo
 	&__logo {
-		display: block;
-		@include adaptiveValue("margin-right", 40, 15, 1400, 768, 1);
+		display: inline-block;
+		@include adaptiveValue("margin-right", 40, 15, 1400, 1200, 1);
 	}
-
+	// .header__menu
 	&__menu {
 	}
-
+	// .header__form
 	&__form {
 	}
-
+	// .header__button
+	&__button {
+	}
+	// .header__actions
 	&__actions {
 	}
 }
 //========================================================================================================================================================
 
+.menu {
+	// .menu__body
+	&__body {
+	}
+	// .menu__list
+	&__list {
+		@media (min-width: $mobile) {
+			display: flex;
+			li {
+				@include adaptiveValue("margin-right", 40, 15, 1400, 1200, 1);
+			}
+		}
+	}
+	// .menu__item
+	&__item {
+	}
+	// .menu__link
+	&__link {
+	}
+}
+
+.products {
+	position: relative;
+	// .products__title
+	&__title {
+		position: relative;
+		cursor: pointer;
+		display: flex;
+		flex-direction: row-reverse;
+		&::before {
+			margin-left: rem(8);
+		}
+	}
+	// .products__submenu
+	&__submenu {
+	}
+}
+
 ._icon-arrow-down {
-	margin-left: em(8, 16);
-	&._spoller-active {
+	._ok &:before {
 		transform: rotateZ(-180deg);
 	}
 }
 
-.menu {
-	&__body {
+.submenu-products {
+	display: none;
+	visibility: hidden;
+	position: absolute;
+	top: rem(25);
+	li:not(:last-child) {
+		margin-bottom: rem(10);
 	}
-
-	&__list {
-		font-weight: 500;
-		line-height: math.div(24, 16);
-		@media (min-width: $mobile) {
-			display: flex;
-		}
-		li {
-			@include adaptiveValue("margin-right", 40, 15, 1400, 768, 1);
-		}
+	._ok & {
+		display: block;
+		visibility: visible;
 	}
-
+	// .submenu-products__item
 	&__item {
 	}
-
+	// .submenu-products__link
 	&__link {
 	}
 }
+
 //========================================================================================================================================================
 
-.products-spollers {
-	&__item {
-	}
-
+.rooms {
+	// .rooms__title
 	&__title {
+		cursor: pointer;
 		display: flex;
 		flex-direction: row-reverse;
-		align-items: center;
+		&::before {
+			margin-left: rem(8);
+		}
 	}
-
-	&__body {
+	// .rooms__submenu
+	&__submenu {
 	}
+}
 
-	&__list {
-	}
-
-	&__item {
-	}
-
+.submenu-rooms {
+	display: none;
+	visibility: hidden;
+	// .submenu-romms__link
 	&__link {
 	}
 }
-//========================================================================================================================================================
-
-.rooms-spollers {
-	display: flex;
-	flex-direction: row-reverse;
-	align-items: center;
-	&__item {
-	}
-
-	&__name {
-		margin-right: em(8, 16);
-	}
-
-	&__title {
-	}
-
-	&__body {
-	}
-
-	&__list {
-	}
-
-	&__link {
-	}
+.input {
 }
-//========================================================================================================================================================
-
 .actions-header {
+	// .actions-header__favorite
 	&__favorite {
 	}
-
+	// .actions-header__cart
 	&__cart {
 	}
-
+	// .actions-header__image-ibg
 	&__image-ibg {
 	}
 }
