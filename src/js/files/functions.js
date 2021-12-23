@@ -455,23 +455,25 @@ export function tabs() {
 }
 // Модуь работы с меню (бургер) =======================================================================================================================================================================================================================
 export function menuInit() {
+	let Menu = document.querySelector('.menu');
 	let iconMenu = document.querySelector(".icon-menu");
 	if (iconMenu) {
 		iconMenu.addEventListener("click", function (e) {
 			if (bodyLockStatus) {
 				bodyLockToggle();
-				document.documentElement.classList.toggle("menu-open");
+				Menu.classList.toggle("menu-open");
+				iconMenu.parentElement.classList.toggle('menu-open');
 			}
 		});
 	};
 }
 export function menuOpen() {
 	bodyLock();
-	document.documentElement.classList.add("menu-open");
+	Menu.classList.add("menu-open");
 }
 export function menuClose() {
 	bodyUnlock();
-	document.documentElement.classList.remove("menu-open");
+	Menu.classList.remove("menu-open");
 }
 // Модуль "показать еще" =======================================================================================================================================================================================================================
 /*
